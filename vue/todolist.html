@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #del{
+            float: right;
+            color: red;
+        }
+        .pink{
+            background: pink;
+        }
+        #app{
+            width: 600px;
+            margin: auto;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            height: 50px;
+            line-height: 50px;
+            background: #ccc;
+            margin-bottom: 10px;
+            padding: 0 10px;
+        }
+        .right{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h2>Todolist</h2>
+        <hr>
+        <div>
+            <label for="">名称</label>
+            <input type="text" id="p_name" placeholder="请输入商品名称" v-model="p_name">
+            <label for="">金额</label>
+            <input type="text" id="p_price" placeholder="请输入金额" v-model="p_price">
+            <button @click="add()">添加</button>
+            <br>
+            <input type="text" placeholder="请输入搜索内容：" v-model="proname">
+            <button @click="search()" >搜索</button>
+        </div>
+        <ul>
+            <li v-for="(obj,index) in list" @click="change(obj)" v-bind:class="{pink:obj.flag}">
+                <input type="checkbox" v-model="obj.flag" >
+                <span>{{obj.name}}</span>
+                <div class="right">
+                    <span>{{obj.price}}</span>
+                    <!-- 注意此时不加.stop阻止的话会冒泡 -->
+                    <span @click.stop="del(index)" id="del" >[X]</span>
+                </div>
+                
+            </li>
+        </ul>
+        <div>
+            <button @click="delall()">删除选中</button>
+            <span>总价为：{{total()}}</span>
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm =new Vue({
+            el:"#app",
+            data:{
+                list:[
+                    {
+                        name:"",
+                        price:13,
+                        flag:false,
+                        isShow:true
+                    }
+                ],
+                p_name:"",
+                p_price:13,
+                proname:'',
+            },
+            methods:{
+                add(){
+                    if(this.p_name && this.p_price){
+                        this.list.push({name:this.p_name,price:this.p_price,flag:false,isShow:true})
+                        this.p_name="",
+                        this.p_price=''
+                    }
+
+                    
+                },
+                del(index){
+                    this.list.splice(index,1) 
+                },
+                // delall(){
+                //     this.list.forEach(function(obj){
+                //         if(obj.index){
+                //             this.list.splice(index,1)
+                //         }  
+                //     })
+                // },
+                delall(){
+                    var a = this.list.filter(function(obj){
+                        return !obj.flag;
+                    })
+                    this.list = [...a];
+                },
+                total(){
+                    let sum = 0;
+                    this.list.forEach(function(obj) {
+                        if(obj.flag){
+                            sum += obj.price;
+                        }
+                        
+                    })
+                    return sum;
+                },
+                change(obj){
+                    obj.flag=!obj.flag
+                },
+                search(){
+                    this.list.forEach((obj) =>{
+                        console.log(obj.name)
+                        console.log(this.proname)
+                        if(obj.name.includes(this.proname))
+                        {
+                            obj.isShow=true;
+                        }
+                        else
+                        {
+                            obj.isShow=!obj.isShow;
+                        }
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+</html>

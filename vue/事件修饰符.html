@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <a href="https://cn.vuejs.org/v2/guide/events.html#%E4%BA%8B%E4%BB%B6%E4%BF%AE%E9%A5%B0%E7%AC%A6"  @click.prevent="fn()">VUE事件修饰符</a>
+        <a href="https://www.bilibili.com/" @click.prevent="fn()">我的B站</a>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+    var vm = new Vue({
+            el:"#app", 
+            methods:{
+                fn(){
+                    console.log("dasdsa");
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-for</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 循环输出studentlist中的obj对象 -->
+        <li v-for="obj in studentlist ">{{obj.name}}   ||   {{obj.age}}</li>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                studentlist:[
+                    {
+                        name:'as',
+                        age:20
+                    },
+                    {
+                        name:'liu',
+                        age:21
+                    }
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

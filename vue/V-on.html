@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-on绑定事件（方法）</title>
+</head>
+<body>
+    <div id="app">
+        <span>{{msg}}</span>
+        <!-- 方法处理器 -->
+        <!-- <button v-on:click="msg='呵呵'">点击</button> -->
+        <button v-on:click="change">点击</button>
+        
+        <button v-on:click="doThis"></button>
+        
+        <!-- 动态事件 (2.6.0+) -->
+        <button v-on:[event]="doThis"></button>
+        <!-- 动态事件 (2.6.0+) -->
+        <button v-on:[event]="doThis"></button>
+
+        <!-- 内联语句 -->
+        <button v-on:click="doThat('1111')"></button>
+
+        <!-- 缩写 -->
+        <button @click="doThis"></button>
+    </div>
+    
+    <script src="vue.js"></script>
+    <script>
+        let vm = new Vue(
+            {
+                el:"#app",
+                data:{
+                    msg:"哈哈"
+                },
+                // 定义事件，方法
+                methods:{
+                     change(){
+                         this.msg="呵呵";
+                     },
+                     doThis(){
+                         this.msg="liuluu";
+                     },
+                     doThat(value){
+                         this.msg = value;
+                     }
+                }
+            }
+        )
+    </script>
+</body>
+</html>

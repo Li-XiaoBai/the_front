@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>V-bind</title>
+    <style>
+        .a{
+            background: red;
+        }
+        .b{
+            color: green;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 绑定属性   -->
+        <!-- :class={class名:boolean} -->
+        <!-- :class = [classA,classB] -->
+        <div :class="{a:isA,b:isB}" >dfghjklk;'</div>
+        <!-- v-bind:id    :id -->
+        <div :class="[classA,classB]"  :id="myId"  >e67890uyrgfhgjhkjlkkjhfg;'</div>
+        <input :type="myType" :id="myId">
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                isA:true,
+                isB:true,
+                classA:'a',
+                classB:'b',
+                myId:'xx',
+                myType:'text',
+                myId:'div1'
+            }
+        })
+    
+    
+    </script>
+</body>
+</html>

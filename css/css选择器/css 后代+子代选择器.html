@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css后代/子代选择器</title>
+
+    <style>
+        /* 后代都选中 */
+        .parent .child{
+            background-color: aqua;
+            color: #000;
+        }
+        /*.parent1 .child{
+            background-color: aqua;
+            color: #000;
+        }*/
+        /*子代选择器*/
+        /* 只能选儿子辈的 */
+        .parent1 > .child{
+            background-color: aqua;
+            color: #000;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        111
+        <div class="child">
+            2222
+        </div>
+        <p>33333</p>
+    </div>
+    <div class="parent1">
+        111
+        <div>
+            222222
+            <div class="child">
+            54555555
+        </div>
+        </div>
+        <p>33333</p>
+    </div>
+
+
+</body>
+</html>

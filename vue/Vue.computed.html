@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算属性</title>
+</head>
+<body>
+    <div id="app">
+        <h2>{{fullname}}</h2>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                firstname:'li',
+                secoundname:'xiang'
+            },
+            computed:{
+                // fullname 属性名 ！！！这是个属性
+                // fullname(){
+                //     return this.firstname+this.secoundname
+                // }
+                // 实际上computed与methods作用一致
+                // 但是computed是依赖缓存,只有相关依赖发生改变时才会重新取值
+                // 而methods是在重新渲染(修改参数)的时候，函数总会重新调用执行。
+                fullname:{
+                    get:function(){
+                        return this.firstname+this.secoundname
+                    },
+                    set:function(newname){
+                        console.log(this)
+                        console.log(newname.firstname),
+                        console.log(newname.secoundname) 
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

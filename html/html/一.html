@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<!--声明文档类型-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--标题-->
+        <title>李想</title>
+    </head>
+    <!--
+        <html> 与 </html> 之间的文本描述网页
+        <body> 与 </body> 之间的文本是可见的页面内容
+    -->
+    
+    <body>
+        <!--h标签-->
+        <!--
+                            HTML 标题
+        HTML 标题（Heading）是通过 <h1> - <h6> 等标签进行定义的
+            字体大小逐级减小
+        -->
+        <h1>这是第一个标题</h1>
+        <hr/>
+        <h2>这是第一个标题</h2>
+        <h3>这是第一个标题</h3>
+        <h4>这是第一个标题</h4>
+        <h5>这是第一个标题</h5>
+        <h6>这是第一个标题</h6>
+        <!--            HTML 水平线
+            <hr /> 标签在 HTML 页面中创建水平线。
+            hr 元素可用于分隔内容。
+        -->
+
+        <!--p标签-->
+        <!--
+                        HTML 段落
+            HTML 段落是通过 <p> 标签进行定义的。
+        -->
+        <p>第一个段落</p>
+        <p>第一个段落铃木入间：村濑步
+            沙利文： 黒田崇矢
+            欧佩拉：斋贺光希
+            阿斯莫德・艾利斯： 木村良平
+            瓦拉克・克拉拉： 朝井彩加
+            萨柏诺克・萨布洛：佐藤拓也
+            夏克斯・利特：山谷祥生</p>
+        <p>第一个段落简介：无法拒绝任何拜托的老好人铃木入间，是个从1岁开始就踏入社会、为了金钱东奔西走、在修罗场求生的十四岁少年，他的父母为了金钱将他卖给了恶魔！阴差阳错之下他签下了恶魔契约、进入了恶魔学院、成为了特待生，并且即将与学院第一的新生代表决斗——</p>
+        <!--浏览器会自动地在段落的前后添加空行。（<p> 是块级元素）-->
+        <!--p标签默认都成行级-->
+        <!--<br /> 元素是一个空的 HTML 元素。-->
+        <!--<br/>用于空行 换行-->
+
+
+        <!--图片-->
+        <!--
+            <img src="" alt="">中src后面接的是路径，即src 指 "source"。源属性的值是图像的 URL 地址。alt 属性用来为图片注释的。
+        -->
+        <!--
+            据对路径
+            相对路径
+        -->
+        <img src="https://i0.hdslb.com/bfs/album/af012e0644b1f7a2ff671c31b5adc4a364080e8c.jpg@2000w_1e.webp"width="480" height="270" alt="">
+        <img src="aaa.gif"width="270" height="270" alt="">
+        <br/>
+        <img src="aaa.jpg" alt="">
+        <br/>
+        <!--在与母目录平级的其他文件夹里-->
+        <img src="../images/bbb.gif" alt="wu ">
+        <br/>
+        <img src="/i/eg_cute.gif" alt="....">
+        <br/>
+        <img src="../images/ddd.png" title="注释图片信息，延迟">
+
+
+
+        <!--HTML 超链接（链接）-->
+        <!--a标签-->
+        <!--语法-->
+        <!--
+            <a href="url"></a>
+                    href 属性规定链接的目标。
+
+        开始标签和结束标签之间的文字被作为超级链接来显示。可以是图片
+        -->
+        <a href="https://www.bilibili.com/"><img src="../images/ccc.jpg"></a>
+        <!--
+                        HTML 链接 - target 属性
+        使用 Target 属性，你可以定义被链接的文档在何处显示。
+                target="blank" 这行会在新窗口打开文档：
+        -->
+        <a href="https://www.baidu.com/" target="blank">跳转到百度</a>
+
+
+
+        <!--HTNL列表-->
+        <!--
+            无序列表
+            有序列表
+            定义列表
+        -->
+
+
+        <!--无序-->
+        <!--
+            无序列表是一个项目的列表，此列项目使用粗体圆点（典型的小黑圆圈）进行标记。
+
+            无序列表始于 <ul> 标签。每个列表项始于 <li>。
+        
+            列表项内部可以使用段落、换行符、图片、链接以及其他列表等等。
+        -->
+        <ul>
+            <li>111</li>
+            <li>2222</li>
+            <li>33333</li>
+            <li><img src="../images/eee.webp"></li>
+        </ul>
+
+
+        <!--有序列表-->
+        <!--
+            同样，有序列表也是一列项目，列表项目使用数字进行标记。
+
+            有序列表始于 <ol> 标签。每个列表项始于 <li> 标签。
+        
+            列表项内部可以使用段落、换行符、图片、链接以及其他列表等等。
+        -->
+        <ol>
+            <li>句子</li>
+            <li>苹果</li>
+            <li>香蕉</li>
+        </ol>
+
+
+
+        <!--块  div+css 布局 -->
+        <!--
+                                块级元素
+            块级元素在浏览器显示时，通常会以新行来开始（和结束）。
+                    例子：<h1>, <p>, <ul>, <table>,<div>
+        -->
+        <!--
+            <div> 元素是块级元素，它是可用于组合其他 HTML 元素的容器。
+
+            <div> 元素没有特定的含义。除此之外，由于它属于块级元素，浏览器会在其前后显示折行。
+
+            如果与 CSS 一同使用，<div> 元素可用于对大的内容块设置样式属性。
+        
+        -->
+        <!--
+                            行级元素
+                内联元素在显示时通常不会以新行开始。
+                    例子：<b>, <td>, <a>, <img>
+        -->
+
+        <!--
+            <span> 元素是内联元素，可用作文本的容器。
+
+            <span> 元素也没有特定的含义。是行级元素。
+
+            当与 CSS 一同使用时，<span> 元素可用于为部分文本设置样式属性。
+        
+        -->
+        <div>
+            lalala
+        </div>
+        asdasdas
+
+
+
+        <!--html 表单-->
+        <!--
+            HTML 表单用于搜集不同类型的用户输入。
+            <form> 元素
+            HTML 表单用于收集用户输入。
+            <form> 元素定义 HTML 表单：
+        -->
+        <!--
+                                    HTML 表单包含表单元素。
+            表单元素指的是不同类型的 input 元素、复选框、单选按钮、提交按钮等等。
+        -->
+        <!--
+            <input> 元素有很多形态，根据不同的 type 属性。
+        -->
+        <!--
+                                文本输入
+            <input type="text"> 定义用于文本输入的单行输入字段：
+            <input type="password"> 定义用于文本输入的单行输入字段是不可见的：
+        -->
+        <form action="">
+            用户名：
+            <input type="text">
+            密码：
+            <input type="password">
+        </form>
+        <!--
+                            单选按钮输入
+                <input type="radio"> 定义单选按钮。
+            单选按钮允许用户在有限数量的选项中选择其中之一：
+        -->
+        <form action="">
+            <input type="radio" name="sex" value="male" checked>Male
+            <br>
+            <input type="radio" name="sex" value="female">Female
+        </form>
+        <!--
+                                提交按钮
+            <input type="submit"> 定义用于向表单处理程序（form-handler）提交表单的按钮。
+
+            表单处理程序通常是包含用来处理输入数据的脚本的服务器页面。
+
+            表单处理程序在表单的 action 属性中指定：
+        -->
+        <form action="">
+            用户名：
+            <input type="text">
+            密码：
+            <input type="password">
+            <input type="submit">
+        </form>
+        <!--额外的关联-->
+        <!--
+            <label for=""> <label>
+        -->
+        <form action="">
+            <label for="username">用户名：</label>
+            <input id="username" type="text">
+            <br>
+            <label for="password">密码：</label>
+            <input id="password" type="password">
+            <input type="submit">
+        </form>
+        <!--
+            复选框
+        -->
+            <input type="checkbox" name="hobby">足球
+            <input type="checkbox" name="hobby">篮球
+            <input type="checkbox" name="hobby">羽毛球
+        <!--
+            <select> 元素（下拉列表）
+            <select> 元素定义下拉列表：
+        -->
+        <form action="">
+            <select name="" id="">
+                <option value="">枫之叶煜</option>
+                <option value="">一叶知秋</option>
+                <option value="">王不留行</option>
+                <option value="">夜雨声烦</option>
+            </select>
+        </form>
+        <!--
+                        <textarea> 元素
+            <textarea> 元素定义多行输入字段（文本域）：
+            cols:行     rows：列
+        -->
+        <form action="">
+            <textarea name="" id="" cols="30" rows="10">
+
+            </textarea>
+            <input type="submit">
+        </form>
+        <!--
+                <button> 元素
+        <button> 元素定义可点击的按钮：
+        -->
+        <form action="">
+            <button>点击</button>
+        </form>
+
+        <!--
+            表单元素
+            1.input       试type而定 
+            2.button      按钮
+            3.select      下拉单
+            4.textarea   文本域
+        -->
+
+
+
+
+        <!--  i  strong 标签   -->
+        <!--    i斜体字   strong 加粗-->
+        <div>
+            sadsdasdas:<i>确定为取得</i>撒大大我的全文<strong>dadwqedwq</strong>wqeqweqwe
+        </div>
+
+
+        <!-- 表格 -->
+        <!--
+            表格由 <table> 标签来定义。每个表格均有若干行（由 <tr> 标签定义），每行被分割为若干单元格（由 <td> 标签定义）。字母 td 指表格数据（table data），即数据单元格的内容。数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等。
+                即tr是行 td是列
+        -->
+        <table>
+            <tr>
+                <td>aaa</td>
+                <td>sss</td>
+                <td>ddd</td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td>222</td>
+                <td>333</td>
+            </tr>
+        </table>
+        <!--
+                                            表格和边框属性
+            如果不定义边框属性，表格将不显示边框。有时这很有用，但是大多数时候，我们希望显示边框。
+
+                                    使用边框属性来显示一个带有边框的表格：
+        -->
+        <table border="1">
+            <tr>
+            <td>Row 1, cell 1</td>
+            <td>Row 1, cell 2</td>
+            </tr>
+        </table>
+        <!--
+                            表格的表头
+                表格的表头使用 <th> 标签进行定义。
+
+                大多数浏览器会把表头显示为粗体居中的文本：
+
+                    cellpadding  单元格边距(Cell padding)
+                Cell padding 来创建单元格内容与其边框之间的空白。
+
+                    cellspacing  单元格间距(Cell spacing)
+                Cell spacing 增加单元格之间的距离。
+        -->
+        <table border="1" cellspacing="0" cellpadding="20">
+            <tr>
+                <th>asd</th>
+                <th>qwe</th>
+                <th>zxc</th>
+            </tr>
+            <tr>
+                <td>aaa</td>
+                <td>sss</td>
+                <td>ddd</td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td>222</td>
+                <td>333</td>
+            </tr>
+            
+        </table>
+    </body>
+</html>

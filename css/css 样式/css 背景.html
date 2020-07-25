@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 背景</title>
+
+    <style>
+        .div1{
+            /* background: darkturquoise; */
+            background-color: darkturquoise;
+            background-image: url(../images/bbb.jpg);
+            /* repeat 重复 */
+            background-repeat: no-repeat;
+            /* 距离左侧200px上端100px */
+            /* 往左移为-数 向上端也为-数 */
+            /*  background-position 位置*/
+            background-position: 200px 100px;
+            height: 500px; 
+            /* 符合属性 */
+            background: darkturquoise url(../images/bbb.jpg) no-repeat -150px -100px;
+        }
+
+        .div2{
+            width: 150px;
+            height: 150px;
+            background-image: url(../images/bbb.jpg);
+            background-repeat: no-repeat;
+            background-position: -225px -225px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="div1">
+        111111
+    </div>
+
+    <div class="div2">
+
+    </div>
+
+</body>
+</html>

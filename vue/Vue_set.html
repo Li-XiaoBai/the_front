@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.set</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="a in list">{{a}}</li>
+        </ul>
+        <button @click="change()">click</button>
+        
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+             el:"#app",
+             data:{
+                 list:['a','b','c']
+             },
+             methods:{
+                 change(){
+                    //  无法在网页显示更改的数组
+                    // 用Vue.set
+                    // this.list[0]="d";
+                    Vue.set(this.list,0,'d');
+                 }
+             }   
+        })
+    </script>
+</body>
+</html>

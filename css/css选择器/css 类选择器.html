@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类选择器</title>
+    <style>
+        .first{
+            color: greenyellow;
+            background: #000;
+        }
+        .second{
+            color: #000;
+            background: hotpink;
+        }
+        #third{
+            color: lawngreen;
+            background:red;
+        }
+    </style>
+</head>
+<body>
+    <!--
+                                                        类选择器
+                                            在 CSS 中，类选择器以一个点号显示：
+
+                                              .center {text-align: center}
+                                    在上面的例子中，所有拥有 center 类的 HTML 元素均为居中。
+
+                    在下面的 HTML 代码中，h1 和 p 元素都有 center 类。这意味着两者都将遵守 ".center" 选择器中的规则。
+
+                                        <h1 class="center">
+                                                This heading will be center-aligned
+                                        </h1>
+
+                                        <p class="center">
+                                                This paragraph will also be center-aligned.
+                                        </p>
+                                注意：类名的第一个字符不能使用数字！它无法在 Mozilla 或 Firefox 中起作用。
+
+    -->
+    <ul>
+        <li class="first">1111</li>
+        <li class="second">2222</li>
+        <li class="first">3333</li>
+        <li id="third">4444</li>
+    </ul>
+    <div id="third">
+        sadasdasdas
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>id选择器</title>
+    <style>
+        #first{
+            color: green;
+            background: #000;
+        }
+
+        #secound{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!--
+                                        id 选择器
+        id 选择器可以为标有特定 id 的 HTML 元素指定特定的样式。
+
+        id 选择器以 "#" 来定义。
+
+        下面的两个 id 选择器，第一个可以定义元素的颜色为红色，第二个定义元素的颜色为绿色：
+
+        #red {color:red;}
+        #green {color:green;}
+        下面的 HTML 代码中，id 属性为 red 的 p 元素显示为红色，而 id 属性为 green 的 p 元素显示为绿色。
+
+        <p id="red">这个段落是红色。</p>
+        <p id="green">这个段落是绿色。</p>
+
+    -->
+    <!--
+                          id是唯一的   相当与别名 如有冲突会导致不同标签改变的一样
+    -->
+    <div id="first">
+        开心
+    </div>
+
+    <div>
+        难受
+
+    </div>
+    <p>
+        哈哈哈
+    </p>
+    <ul>
+        <li>
+            11111
+        </li>
+
+        <li id="secound">
+            2222
+        </li>
+
+        <li>
+            3333
+        </li>
+    </ul>
+</body>
+</html>

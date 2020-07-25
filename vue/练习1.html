@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="msg" @keyup="search()">
+        <button @click="add()">add</button>
+        <ul>
+            <li @click="change(obj)" v-for="(obj,index) in list"  v-show="obj.flag" v-bind:class="{red:obj.isred}">
+                {{obj.msg}}
+                <button @click="del(index)">del</button>
+            </li>
+        </ul>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                list:[
+                    {
+                        msg:"aaa",
+                        flag:true,
+                        isred:false
+                    }
+                ]
+            },
+            methods:{
+                add(){
+                    this.list.push({msg:this.msg,flag:true,isred:false}); 
+                    //添加结束重置为空
+                    this.msg = "";
+                    this.search();
+                },
+                del(index){
+                    this.list.splice(index,1)
+                },
+                change(obj){
+                    obj.isred = !obj.isred
+                },
+                search(){
+                    var msg=this.msg;
+                    this.list.forEach(function (obj,index) {
+                        if(obj.msg.includes(msg)){
+                            obj.flag=true
+                        }
+                        else{
+                            obj.flag=false
+                        }
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+</html>

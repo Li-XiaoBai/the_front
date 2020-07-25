@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-if</title>
+</head>
+<body>
+    <div id="app">
+        <!-- v-if初始化开销小 -->
+        <h5  v-if="flag">{{msg}}</h5>
+        <!-- 用于显示或隐藏，多次重复执行时消耗的资源小于v-if -->
+        <h4 v-show="flag">{{msg}}</h4>
+
+        <h3 v-if="a==2">111</h3>
+        <h3 v-else-if="a==1">222</h3>
+        <h3 v-else>333</h3>
+        <button @click="change">click</button>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm =new Vue(
+            {
+                el:"#app",
+                data:{
+                    msg:"222",
+                    a:3,
+                    flag:true
+                },
+                methods:{
+                    change(){
+                        this.flag = !this.flag
+                    }
+                }
+            }
+        )
+    </script>
+</body>
+</html>

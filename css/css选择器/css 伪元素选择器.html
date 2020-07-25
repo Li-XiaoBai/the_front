@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 伪元素选择器</title>
+
+    <style>
+        /* 在.dd类之后添加 */
+        .dd::after{
+            content: 'sss';
+            /* 该元素是虚拟出来的 */
+            /* 以下为虚拟元素的样式 */
+            color: blue;
+        }
+        /* 在.dd类之前添加 */
+        .dd::before{
+            content: 'sss';
+            /* 该元素是虚拟出来的 */
+            /* 以下为虚拟元素的样式 */
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="aa">
+        aaaaa
+    </div>
+    <div class="bb">
+        bbbb
+    </div>
+    <div class="cc">
+        cccc
+    </div>
+    <div class="dd">
+        dddd
+    </div>
+</body>
+</html>
